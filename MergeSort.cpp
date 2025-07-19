@@ -58,7 +58,7 @@ void printVerticalBars(const vector<int> &arr, int cur = -1, int next = -1, unor
     }
     cout << '\n';
 
-    this_thread::sleep_for(chrono::milliseconds(10));
+    this_thread::sleep_for(chrono::milliseconds(500));
 }
 
 void merge(vector<int> &arr, int left,
@@ -84,7 +84,7 @@ void merge(vector<int> &arr, int left,
 
     while (i < n1 && j < n2)
     {
-        printVerticalBars(arr, k, k + 1, sorted);
+        printVerticalBars(arr, i+left, j+mid+1, sorted);
         if (L[i] <= R[j])
         {
             arr[k] = L[i];
@@ -100,7 +100,7 @@ void merge(vector<int> &arr, int left,
 
     while (i < n1)
     {
-        printVerticalBars(arr, k, k + 1, sorted);
+        printVerticalBars(arr, k, k+1, sorted);
         arr[k] = L[i];
         i++;
         k++;
