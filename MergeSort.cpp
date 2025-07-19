@@ -58,7 +58,7 @@ void printVerticalBars(const vector<int> &arr, int cur = -1, int next = -1, unor
     }
     cout << '\n';
 
-    this_thread::sleep_for(chrono::milliseconds(500));
+    this_thread::sleep_for(chrono::milliseconds(10));
 }
 
 void merge(vector<int> &arr, int left,
